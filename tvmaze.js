@@ -106,7 +106,7 @@ function populateEpisodes(episodes) {
 
   for (let episode of episodes) {
     let $item = $(
-      `<li>${episode.name}, (${episode.season}, ${episode.number})</li>`
+      `<li>${episode.name}, (Season: ${episode.season}, Episode: ${episode.number})</li>`
     );
 
     $episodesList.append($item);
