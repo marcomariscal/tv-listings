@@ -111,6 +111,8 @@ function populateEpisodes(episodes) {
 
     $episodesList.append($item);
   }
+
+  $("#episodesModal").modal("show");
 }
 
 $("#shows-list").on("click", ".episodes-button", async function handleClick(
@@ -125,6 +127,4 @@ $("#shows-list").on("click", ".episodes-button", async function handleClick(
   let episodes = await getEpisodes(id);
 
   populateEpisodes(episodes);
-
-  $("#episodes-area").toggle();
 });
